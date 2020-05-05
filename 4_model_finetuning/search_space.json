@@ -1,0 +1,5 @@
+{
+    "n_estimators": {"_type":"randint","_value":[10, 250]},
+    "max_depth": {"_type":"randint","_value":[1, 50]},
+    "min_samples_leaf": {"_type":"uniform","_value":[0.000001, 0.01]}
+}

@@ -1,0 +1,20 @@
+authorName: default
+experimentName: example_sklearn-regression
+trialConcurrency: 4
+maxExecDuration: 1h
+maxTrialNum: 50
+#choice: local, remote
+trainingServicePlatform: local
+searchSpacePath: search_space.json
+#choice: true, false
+useAnnotation: false
+tuner:
+  #choice: TPE, Random, Anneal, Evolution, BatchTuner, MetisTuner
+  builtinTunerName: TPE
+  classArgs:
+    #choice: maximize, minimize
+    optimize_mode: minimize
+trial:
+  command: python3 nni_model_finetuning.py
+  codeDir: .
+  gpuNum: 0
